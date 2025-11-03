@@ -20,6 +20,8 @@ It also verifies domain authentication and shared-folder permissions using a rea
 
 ## 🌐 Network Configuration
 
+**Internal Network Topology (LABNET)**
+
 [VirtualBox Host]
 │
 (LABNET)
