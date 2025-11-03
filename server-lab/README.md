@@ -53,7 +53,7 @@ It also verifies domain authentication and shared-folder permissions using a rea
 - **DHCP Scope:** 192.168.10.20 – 192.168.10.200  
 - **DNS:** Forward Lookup Zone `jasmovation.local` with dynamic updates  
 - **Domain Join:** CLIENT01 → jasmovation.local  
-- **Domain User:** `JASMOVATION\LabUser` (`Secure@2024`)  
+- **Domain User:** `JASMOVATION\LabUser` (`password`)  
 - **Shared Folder:** `\\dc01\CompanyShare` (granted Domain Users Modify access)  
 - **Group Policy Test:** Custom logon-message policy pushed to CLIENT01  
 
