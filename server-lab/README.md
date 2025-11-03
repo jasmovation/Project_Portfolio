@@ -18,6 +18,36 @@ It also verifies domain authentication and shared-folder permissions using a rea
 
 ---
 
+## 🌐 Network Configuration
+
+```plaintext
+[VirtualBox Host]
+      │
+   (LABNET)
+      │
+ ┌────────────┐       ┌───────────────┐
+ │   DC01     │◄────►│   CLIENT01    │
+ │192.168.10.10│     │192.168.10.11 │
+ └────────────┘       └───────────────┘
+
+
+| Setting | Value | Description |
+|----------|--------|-------------|
+| **Domain Name** | `jasmovation.local` | Active Directory root domain |
+| **Internal Network (LABNET)** | `192.168.10.0/24` | VirtualBox Internal Network for AD/DHCP/DNS |
+| **DC01 IP Address** | `192.168.10.10` | Static IP assigned to Domain Controller |
+| **CLIENT01 IP Address** | `192.168.10.11` | DHCP-assigned address within LABNET scope |
+| **DHCP Scope Range** | `192.168.10.20 – 192.168.10.200` | Address pool managed by DC01 |
+| **Default Gateway (Option 003)** | `192.168.10.10` | DC01 acts as internal gateway |
+| **DNS Server (Option 006)** | `192.168.10.10` | DNS hosted on DC01 |
+| **Domain Suffix (Option 015)** | `jasmovation.local` | Automatically assigned for name resolution |
+
+> **Note:**  
+> All IPs (`192.168.10.x`) are private lab addresses used for demonstration purposes only.  
+> These fall within [RFC 1918](https://datatracker.ietf.org/doc/html/rfc1918) ranges and are **not routable on the public Internet**.
+
+---
+
 ## 🧩 Configuration Highlights
 - **Active Directory Domain Services (AD DS)** promoted on DC01  
 - **DHCP Scope:** 192.168.10.20 – 192.168.10.200  
@@ -25,7 +55,7 @@ It also verifies domain authentication and shared-folder permissions using a rea
 - **Domain Join:** CLIENT01 → jasmovation.local  
 - **Domain User:** `JASMOVATION\LabUser` (`Secure@2024`)  
 - **Shared Folder:** `\\dc01\CompanyShare` (granted Domain Users Modify access)  
-- **Group Policy Test:** custom logon-message policy pushed to CLIENT01  
+- **Group Policy Test:** Custom logon-message policy pushed to CLIENT01  
 
 ---
 
