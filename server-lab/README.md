@@ -56,6 +56,9 @@ It also verifies domain authentication and shared-folder permissions using a rea
 - **Domain User:** `JASMOVATION\LabUser` (`<DemoPassword>`)  
 - **Shared Folder:** `\\dc01\CompanyShare` (granted Domain Users Modify access)  
 - **Group Policy Test:** Custom logon-message policy pushed to CLIENT01  
+> **Security Note:**  
+> All credentials and IPs shown are for a private, offline lab environment.  
+> No real systems, user data, or production networks are represented in this project.
 
 ---
 
