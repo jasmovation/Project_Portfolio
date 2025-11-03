@@ -22,14 +22,8 @@ It also verifies domain authentication and shared-folder permissions using a rea
 
 **Internal Network Topology (LABNET)**
 
-[VirtualBox Host]
-│
-(LABNET)
-│
-┌────────────┐ ┌───────────────┐
-│ DC01 │◄────►│ CLIENT01 │
-│192.168.10.10│ │192.168.10.11 │
-└────────────┘ └───────────────┘
+![LABNET Network Topology](screenshots/00_LABNET_Topology.png)
+
 
 
 | Setting | Value | Description |
